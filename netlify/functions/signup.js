@@ -31,7 +31,6 @@ async function verifyToken (token) {
 async function subscribe(email) {
   const details = {
     api_key: process.env.SENDY_API_KEY,
-    name,
     email,
     list: process.env.SENDY_LIST_ID,
     boolean: true
