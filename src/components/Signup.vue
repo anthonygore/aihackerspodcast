@@ -2,15 +2,24 @@
 import {ref} from "vue";
 
 const email = ref('')
+const captchaToken = ref('')
 const isSuccess = ref(false)
 const loading = ref(false)
 const error = ref(null)
 
+function emailIsValid(email) {
+  const re =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  return re.test(email)
+}
+
 async function submit() {
-  if (email.value.length) {
-    error.value = null
-    loading.value = true
+  error.value = null
+  if (!emailIsValid(email.value)) {
+    error.value = "Email is invalid."
+  } else {
     try {
+      loading.value = true
       const res = await fetch('/.netlify/functions/signup', {
         method: 'POST',
         body: JSON.stringify({ email: email.value }),
