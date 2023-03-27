@@ -5,7 +5,7 @@ const navigation = {
   social: [
     {
       name: 'Subscribe',
-      href: '#',
+      href: '#subscribe',
       icon: defineComponent({
         render: () =>
             h('svg', { fill: 'none', viewBox: '0 0 24 24', 'stroke-width': '1.5', 'stroke': 'currentColor' }, [
@@ -20,7 +20,7 @@ const navigation = {
     },
     {
       name: 'Twitter',
-      href: '#',
+      href: 'https://twitter.com/aihackersfm',
       icon: defineComponent({
         render: () =>
             h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
@@ -32,7 +32,7 @@ const navigation = {
     },
     {
       name: 'YouTube',
-      href: '#',
+      href: 'https://www.youtube.com/@aihackerspodcast',
       icon: defineComponent({
         render: () =>
             h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
