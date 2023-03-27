@@ -3,9 +3,11 @@ import {ref} from "vue";
 
 const email = ref('')
 const isSuccess = ref(false)
+const loading = ref(false)
 
 async function submit() {
   if (email.value.length) {
+    loading.value = true
     const res = await fetch('/.netlify/functions/signup', {
       method: 'POST',
       body: JSON.stringify({ email: email.value }),
@@ -13,6 +15,7 @@ async function submit() {
         "Content-Type": "application/json",
       },
     })
+    loading.value = false
     if (res.status === 200) {
       isSuccess.value = true
     } else {
@@ -34,8 +37,8 @@ async function submit() {
         </div>
         <div class="mx-auto flex gap-x-2" v-else>
           <label for="email-address" class="sr-only">Email address</label>
-          <input v-model="email" id="email-address" name="email" type="email" autocomplete="email" required class="w-72 flex-auto rounded-md border-0 bg-white px-3.5 py-2" placeholder="Enter your email">
-          <button type="button" @click="submit" class="flex-none rounded-md bg-white py-2.5 px-3.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Notify me</button>
+          <input :class="{ 'opacity-25': loading }" :disabled="loading" v-model="email" id="email-address" name="email" type="email" autocomplete="email" required class="w-72 flex-auto rounded-md border-0 bg-white px-3.5 py-2" placeholder="Enter your email">
+          <button :class="{ 'opacity-25': loading }" :disabled="loading" type="button" @click="submit" class="flex-none rounded-md bg-white py-2.5 px-3.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Notify me</button>
         </div>
       </div>
     </div>
