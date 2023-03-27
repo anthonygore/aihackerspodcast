@@ -57,7 +57,7 @@ async function submit() {
       <div class="mx-auto max-w-2xl flex flex-col" id="subscribe">
         <h2 class="text-4xl font-bold text-white pb-6 text-center">Get notified when we’re launching</h2>
         <p class="text-lg text-indigo-200 pb-10 text-center"><strong>AI Hackers Podcast</strong> will be launching soon. Please leave you're email to be notified of the first episode. No spam, one-click unsubscribe.</p>
-        <div v-if="isSuccess" class="bg-green-500 rounded-md p-4 text-green-50">
+        <div v-if="isSuccess" class="bg-green-500 rounded-md p-4 text-green-50 text-center">
           You're subscribed!
         </div>
         <div class="mx-auto" v-else>

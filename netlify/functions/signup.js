@@ -36,6 +36,7 @@ async function subscribe(name, email) {
     list: process.env.SENDY_LIST_ID,
     boolean: true
   }
+  console.log(details)
   const response = await fetch(`${SENDY_URL}/subscribe`, {
     method: 'POST',
     headers: {
