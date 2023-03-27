@@ -8,7 +8,8 @@ async function submit() {
       method: 'POST',
       body: JSON.stringify({ email: email.value })
     })
-    console.log(body, status)
+    const res = await body.text()
+    console.log(res, status)
   }
 }
 </script>
