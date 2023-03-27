@@ -3,7 +3,7 @@ import {ref} from "vue";
 
 const email = ref('')
 async function submit() {
-  if (email.length) {
+  if (email.value.length) {
     const { data, status } = await fetch('/.netlify/functions/signup', {
       method: 'POST',
       body: JSON.stringify({ email: email.value })
