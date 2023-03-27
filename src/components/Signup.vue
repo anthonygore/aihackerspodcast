@@ -1,11 +1,20 @@
 <script setup>
-import {ref} from "vue";
+import {onMounted, ref} from "vue";
+import { useReCaptcha } from 'vue-recaptcha-v3'
+
+const { executeRecaptcha, recaptchaLoaded } = useReCaptcha()
 
 const email = ref('')
 const captchaToken = ref('')
 const isSuccess = ref(false)
-const loading = ref(false)
+const loading = ref(true)
 const error = ref(null)
+
+onMounted(async () => {
+  await recaptchaLoaded()
+  captchaToken.value = await executeRecaptcha('login')
+  loading.value = false
+})
 
 function emailIsValid(email) {
   const re =
@@ -22,7 +31,7 @@ async function submit() {
       loading.value = true
       const res = await fetch('/.netlify/functions/signup', {
         method: 'POST',
-        body: JSON.stringify({ email: email.value }),
+        body: JSON.stringify({ email: email.value, captchaToken: captchaToken.value }),
         headers: {
           "Content-Type": "application/json",
         },
