@@ -4,12 +4,15 @@ import {ref} from "vue";
 const email = ref('')
 async function submit() {
   if (email.value.length) {
-    const { body, status } = await fetch('/.netlify/functions/signup', {
+    const res = await fetch('/.netlify/functions/signup', {
       method: 'POST',
-      body: JSON.stringify({ email: email.value })
+      body: JSON.stringify({ email: email.value }),
+      headers: {
+        "Content-Type": "application/json",
+      },
     })
-    const res = await body.text()
-    console.log(res, status)
+    const data = await res.json()
+    console.log(data)
   }
 }
 </script>
