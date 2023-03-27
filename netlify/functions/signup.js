@@ -28,7 +28,7 @@ async function verifyToken (token) {
   return success
 }
 
-async function subscribe(name, email) {
+async function subscribe(email) {
   const details = {
     api_key: process.env.SENDY_API_KEY,
     name,
