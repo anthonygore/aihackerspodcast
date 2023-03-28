@@ -55,8 +55,8 @@ async function submit() {
   <div class="bg-gradient-to-t from-indigo-900 via-indigo-800 to-indigo-600">
     <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
       <div class="mx-auto max-w-2xl flex flex-col" id="subscribe">
-        <h2 class="text-4xl font-bold text-white pb-6 text-center">Get notified when we’re launching</h2>
-        <p class="text-lg text-indigo-200 pb-10 text-center"><strong>AI Hackers Podcast</strong> will be launching soon. Please leave you're email to be notified of the first episode. No spam, one-click unsubscribe.</p>
+        <h2 class="text-4xl font-bold text-white pb-6 text-center font-serif">Get notified of new episodes</h2>
+        <p class="text-lg text-indigo-200 pb-10 text-center"><strong>AI Hackers Podcast</strong> will be launching soon. Please leave you're email to be notified of new episodes. No spam, one-click unsubscribe.</p>
         <div v-if="isSuccess" class="bg-green-500 rounded-md p-4 text-green-50 text-center">
           You're subscribed!
         </div>

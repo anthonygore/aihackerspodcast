@@ -6,8 +6,8 @@
   <div>
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
       <div class="prose prose-lg max-w-none">
-        <h2>Guests</h2>
-        <p>I'm looking for developers who are creating AI tools or AI-powered tools who'd like to be guests on the show.</p>
+        <h2 class="font-serif">Guests</h2>
+        <p>Are you a developer who's building and shipping AI products? You might be the perfect next guest for this show!</p>
         <p></p>
         <p>If you're interested, please send an email to <span class="text-gray-500">dark.water7260 [at] fastmail.com</span>.</p>
       </div>

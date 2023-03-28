@@ -52,11 +52,11 @@ const navigation = {
   <div class="bg-gradient-to-t from-indigo-900 via-indigo-800 to-indigo-600">
     <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-20 sm:pb-28">
       <div class="text-center">
-        <h1 class="text-5xl font-extrabold text-gray-900 pb-8 text-white">
+        <h1 class="text-5xl font-extrabold text-gray-900 pb-8 text-white font-serif">
           AI Hackers Podcast
         </h1>
         <h3 class="text-xl text-indigo-200 pb-12">
-          Conversations with developers and entrepreneurs about building AI-powered products
+          Conversations with the developers and entrepreneurs building the future with AI.
         </h3>
         <div class="flex justify-center items-center gap-6 flex-wrap">
           <a v-for="item in navigation.social" :key="item.name" :href="item.href" class="text-sm text-white hover:text-indigo-100 flex items-center gap-2 border py-2 px-4 rounded-md border-white hover:border-indigo-200">
