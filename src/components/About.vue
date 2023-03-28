@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
       <div class="prose prose-lg max-w-none">
         <h2>About</h2>
         <p>AI is currenty experiencing warp-speed development with new tools and features being launched every other day.</p>
