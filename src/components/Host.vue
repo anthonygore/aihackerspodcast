@@ -5,8 +5,8 @@
 <template>
   <div class="bg-gray-100">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-      <div class="prose prose-lg max-w-none">
-        <h2 class="font-serif">The host</h2>
+      <div class="prose max-w-none">
+        <h2 class="font-display text-3xl">The host</h2>
         <div class="flex flex-col sm:flex-row sm:gap-8 items-center justify-center">
           <div class="sm:grow-0 sm:shrink-0">
             <img class="inline-block h-24 w-24 rounded-full mx-0 my-2" src="https://pbs.twimg.com/profile_images/1315557674533089286/WRWiKQA-_400x400.jpg" alt="Anthony Gore">

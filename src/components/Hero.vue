@@ -49,13 +49,13 @@ const navigation = {
 </script>
 
 <template>
-  <div class="bg-gradient-to-t from-indigo-900 via-indigo-800 to-indigo-600">
+  <div class="bg-[url('/aihackers_background.jpg')] bg-center bg-cover">
     <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-20 sm:pb-28">
       <div class="text-center">
-        <h1 class="text-5xl font-extrabold text-gray-900 pb-8 text-white font-serif">
+        <h1 class="text-5xl font-extrabold text-gray-900 pb-8 text-white font-display">
           AI Hackers Podcast
         </h1>
-        <h3 class="text-xl text-indigo-200 pb-12">
+        <h3 class="text-xl text-indigo-200 pb-12 font-display">
           Conversations with the developers and entrepreneurs building the future with AI.
         </h3>
         <div class="flex justify-center items-center gap-6 flex-wrap">
