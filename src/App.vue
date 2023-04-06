@@ -2,6 +2,7 @@
   <div class="min-h-screen bg-white">
 <!--    <Nav />-->
     <Hero />
+    <Player />
     <About />
     <Host />
     <Guests />
@@ -18,10 +19,11 @@ import About from "./components/About.vue";
 import Host from "./components/Host.vue";
 import Guests from "./components/Guests.vue";
 import Footer from "./components/Footer.vue";
+import Player from "./components/Player.vue";
 
 export default {
   name: 'App',
-  components: {Footer, Guests, Host, About, Signup, Hero, Nav},
+  components: {Player, Footer, Guests, Host, About, Signup, Hero, Nav},
 };
 </script>
 
